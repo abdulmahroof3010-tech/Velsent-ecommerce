@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* Then use it in your CSS */
+body {
+  font-family: 'Noto Serif', serif;
+}
+
+/* Or create a class */
+.noto-serif {
+  font-family: 'Noto Serif', serif;
+}   
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;    
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scrollX 25s linear infinite;
+}
+
+/* Pause on hover (premium UX) */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
